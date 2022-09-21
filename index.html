@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>iot js</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./fonts/themify-icons-font/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JNKKKK/MoreToggles.css@0.2.1/output/moretoggles.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row bg-dark text-white" style="height: 50px; font-size: 20px; line-height: 50px;">
+    <div class="btn-menu" style="padding: 0 20px; cursor: pointer; line-height: 50px; font-size: 20px;">
+      <i class="menu ti-align-justify"></i>
+  </div>Bảng điều khiển thiết bị</div>
+  <div class="row" style="height: 200px;">
+    
+    <div class="col-sm-4 ">
+      <div id="box1" style="height:200px;border-radius:20px;">
+        <h3 class="pt-5 text-center text-light">Nhiệt Độ
+          <div id="nhietdo"></div>
+          <!-- <h4 id="ok" class="text-center text-light">ok</h4> -->
+          <script>
+            var a = document.getElementById("nhietdo").innerHTML = Math.floor(Math.random() * 100);
+            if (a <= 30){
+            document.getElementById("box1").style.backgroundColor = "blue" ;
+            // document.getElementById("ok");
+            }else if(a>30 &&a <= 50) {
+            document.getElementById("box1").style.backgroundColor = "orange";
+            }else if( a>50){
+            document.getElementById("box1").style.backgroundColor = "red";
+            }
+          </script>
+      </h3>
+    </div>
+  </div>
+
+<div class="col-sm-4" >        
+  <div id="box2" style="height:200px;border-radius:20px;">
+    <h3 class="pt-5 text-center  text-light">Độ Ẩm
+      <div id="doam"></div>
+        <script>
+         var b = document.getElementById("doam").innerHTML = Math.floor(Math.random() * 100);
+          if (b < 30){
+            document.getElementById("box2").style.backgroundColor = "red";
+          }else if(b>=30 && b < 70) {
+            document.getElementById("box2").style.backgroundColor = "orange";
+          }else if( b >= 70){
+            document.getElementById("box2").style.backgroundColor = "blue";
+          }
+        </script>
+    </h3>
+  </div>
+</div>
+
+<div class="col-sm-4" >        
+  <div id="box3" style="height:200px;border-radius:20px;">
+    <h3 class="pt-5 text-center  text-light">ánh sáng
+      <div id="anhsang"></div>
+        <script>
+         var c = document.getElementById("anhsang").innerHTML = Math.floor(Math.random() * 100);
+          if (c < 30){
+            document.getElementById("box3").style.backgroundColor = "black";
+          }else if(c>=30 && c < 70) {
+            document.getElementById("box3").style.backgroundColor = "green  ";
+          }else if( c >= 70){
+            document.getElementById("box3").style.backgroundColor = "blue";
+          }
+        </script>
+      </h3>
+    </div>
+</div>
+
+</div>
+
+  <div class="row" style="height: 500px;">
+    <div class="col-sm-8">
+      <div  class="bg-dark table-bordered text-white" style="border-radius: 20px;">
+        <img src="./css/img/hochiminh-meteo-average-weather.jpg" style="height: 500px; width: 100%;">
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      
+      <div id="button_1" class="cow-sm  table-bordered text-black text-center" style="height: 250px; width: 100%; background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(0, 255, 247)); border-radius: 20px;">
+        <h3>led1</h3>
+        <button type="button" class="btn btn-success" style="height: 70px; width: 120px;" onclick="document.getElementById('button_1').style.backgroundColor = 'blue'">on</button>
+        <button type="button" class="btn btn-danger" style="height: 70px; width: 120px;" onclick="document.getElementById('button_1').style.backgroundColor = 'black'">off</button>
+      </div>
+
+      <div id="button_2" class="cow-sm  table-bordered text-black text-center" style="height: 250px; width: 100%; background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(0, 255, 247)); border-radius: 20px;">
+        <h3>led2</h3>
+        <button type="button" class="btn btn-success" style="height: 70px; width: 120px;" onclick="document.getElementById('button_2').style.backgroundColor = 'blue'">on</button>
+        <button type="button" class="btn btn-danger" style="height: 70px; width: 120px;" onclick="document.getElementById('button_2').style.backgroundColor = 'black'">off</button>
+      </div>
+
+      <!-- <div class="cow-sm bg-warning table-bordered text-white text-center" style="height: 250px; width: 100%; background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(229, 255, 0)); border-radius: 20px;">
+        <h1>bóng đèn</h1>
+        <div class="mt-check-garden"> 
+            <input id="2" type="checkbox" />
+            <label for="2"></label> 
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
